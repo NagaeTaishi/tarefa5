@@ -1,0 +1,19 @@
+
+
+
+
+.container{
+    text-align: center;
+    width:50%;
+    margin:20px auto 0 auto;
+    border:1px solid #222;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .4);
+    background-color: #fff;
+    padding:0 0 20px 0;
+    
+}
+
+button{
+    margin:0 5px;
+    background-color: skyblue;
+}
