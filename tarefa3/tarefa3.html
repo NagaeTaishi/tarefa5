@@ -20,11 +20,16 @@
         <script>
             let start;
             let timer_id;
+            let outPut;
             //スタートボタンをクリックすると、カウントをスタート
-            document.getElementById('startButton').addEventListener('click', function() {
-                start = new Date();
-                timer_id = setInterval(goTimer, 100)
+            
+                document.getElementById('startButton').addEventListener('click', function() {
+                   if ('timer'.innerHTML == '00:00:00:0'){
+                        start = new Date();
+                        timer_id = setInterval(goTimer, 100)
+                    }
             });
+            
             //ストップボタンをクリックすると、タイマーをストップ
             document.getElementById('stopButton').addEventListener('click', function(){
                 clearInterval(timer_id);
@@ -60,8 +65,9 @@
                 seconds = addZero(seconds)
                 minutes = addZero(minutes)
                 
+                let outPut = hours + ':' + minutes +':' + seconds +':' + milli;
                 
-                document.getElementById('timer').innerHTML = hours + ':' + minutes +':' + seconds +':' + milli;
+                document.getElementById('timer').innerHTML = outPut ;
             }
         </script>
     </body>
